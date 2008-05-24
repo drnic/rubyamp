@@ -123,7 +123,7 @@ class Grepper
             :line_number => line_number,
             :content => content,
             :path => path
-          } unless @matches.find { |match| match[:file] == file }
+          } unless @matches.find { |match| match[:file] == file && match[:line_number] == line_number }
         end
         last_path = path
       end
